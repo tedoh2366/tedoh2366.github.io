@@ -16,8 +16,8 @@ Example code for EAP sensors will be added in this section
 ## Sensor 2
 ### Sensor 3
 
-- Bulleted
-- List
+- Data1
+- Data2
 
 1. Numbered
 2. List
