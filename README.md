@@ -1,6 +1,6 @@
 ## Welcome To the Intleymer Blog
 
-http://www.intelymer.com
+(http://www.intelymer.com)
 
 
 ### Markdown
