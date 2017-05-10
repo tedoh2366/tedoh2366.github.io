@@ -2,7 +2,7 @@
 
 For more details see [Intelymer.com](http://www.intelymer.com)
 
-![Refiner #2a.jpg](http://tedoh2366.github.io/FlexJointInstall/Refiner #2a.jpg)
+![Refiner #2a.jpg](http://tedoh2366.github.io/FlexJointInstall/)
 
 
 ### May 10th, 2017
@@ -12,9 +12,9 @@ This is a test
 ```markdown
 Example code for EAP sensors will be added in this section
 
-# Header 1
-## Header 2
-### Header 3
+# Sensor 1
+## Sensor 2
+### Sensor 3
 
 - Bulleted
 - List
