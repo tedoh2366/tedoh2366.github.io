@@ -1,6 +1,7 @@
 ## Welcome To the Intleymer Blog
 
 For more details see [Intelymer.com](http://www.intelymer.com)
+
 For LabVIEW software see [EAP-LabVIEW](http://github.com/tedoh2366/tedoh2366.github.io/software/labview)
 
 ![Flex Joint](https://tedoh2366.github.io/blob/master/FlexJointInstall/Refiner2a.jpg)
