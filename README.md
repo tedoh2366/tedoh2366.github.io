@@ -2,7 +2,7 @@
 
 For more details see [Intelymer.com](http://www.intelymer.com)
 
-![Flex Joint](https://github.com/tedoh2366/tedoh2366.github.io/blob/master/FlexJointInstall/Refiner2a.jpg)
+![Flex Joint](https://tedoh2366.github.io/blob/master/FlexJointInstall/Refiner2a.jpg)
 
 
 ### May 10th, 2017
