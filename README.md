@@ -2,7 +2,7 @@
 
 For more details see [Intelymer.com](http://www.intelymer.com)
 
-![Refiner #2a.jpg](tedoh2366.github.io/FlexJointInstall/Refiner #2a.jpg)
+![Refiner #2a.jpg](tedoh2366.github.io/FlexJointInstall/)
 
 
 ### May 10th, 2017
@@ -21,10 +21,6 @@ Example code for EAP sensors will be added in this section
 
 1. Numbered
 2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
