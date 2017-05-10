@@ -2,7 +2,7 @@
 
 For more details see [Intelymer.com](http://www.intelymer.com)
 
-For LabVIEW software see [EAP-LabVIEW](http://github.com/tedoh2366/tedoh2366.github.io/software/labview)
+For LabVIEW software see [EAP-LabVIEW](tedoh2366.github.io/software/labview/Gen2.1 Eval Kit Software/LabVIEW Executable/Parker_Gen2Sensor_v2.3/Parker_Gen2Sensor_v2.3.exe)
 
 ![Flex Joint](https://tedoh2366.github.io/blob/master/FlexJointInstall/Refiner2a.jpg)
 
