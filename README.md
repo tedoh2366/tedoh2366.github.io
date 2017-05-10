@@ -10,7 +10,9 @@ For Instructions: [EAP Evaluation Kit Wiki](tedoh2366.github.io/software/labview
 
 ### May 10th, 2017
 
-This is a test
+Hello Wonder Rubbers. This will be a daily blog on the latest and greatest of all things squishy:
+
+![Mac-Daddy]()
 
 ```markdown
 Example code for EAP sensors will be added in this section
