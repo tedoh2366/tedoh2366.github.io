@@ -2,15 +2,15 @@
 
 For more details see [Intelymer.com](http://www.intelymer.com)
 
-[Refiner #2a.jpg](http://tedoh2366.github.io/FlexJointInstall/Refiner #2a.jpg)
+![Refiner #2a.jpg](http://tedoh2366.github.io/FlexJointInstall/Refiner #2a.jpg)
 
 
-### Markdown
+### May 10th, 2017
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+This is a test
 
 ```markdown
-Syntax highlighted code block
+Example code for EAP sensors will be added in this section
 
 # Header 1
 ## Header 2
