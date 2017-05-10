@@ -1,7 +1,8 @@
 ## Welcome To the Intleymer Blog
 
 For more details see [Intelymer.com](http://www.intelymer.com)
-(http://tedoh2366.github.io/FlexJointInstall)[Refiner #2a.jpg]
+
+[Refiner #2a.jpg](http://tedoh2366.github.io/FlexJointInstall/)
 
 
 ### Markdown
