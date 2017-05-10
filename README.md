@@ -22,13 +22,6 @@ Example code for EAP sensors will be added in this section
 1. Numbered
 2. List
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Themes
-
-Your Pages site will use the layout and styles from the Intelymer web site
-
 ### Support or Contact
 
 alex.york@parker.com
