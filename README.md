@@ -2,9 +2,9 @@
 
 For ordering details see [www.intelymer.com](http://www.intelymer.com)
 
-For EAP Software: [(.exe)](tedoh2366.github.io/software/labview/Gen2.1 Eval Kit Software/LabVIEW Executable/Parker_Gen2Sensor_v2.3/Parker_Gen2Sensor_v2.3.exe)    [(.vi)](tedoh2366.github.io/software/labview/Gen2.1 Eval Kit Software/LabVIEW VI/Parker_Gen2Sensor_v2.3.vi)   [(Windows 7 USB Driver)](tedoh2366.github.io/software/labview/Gen2.1 Eval Kit Software/Software to Install/AX-008-038_RevA.inf)   [LabVIEW Drivers]()
+For Wonder-Rubber Software: [(.exe)](tedoh2366.github.io/software/labview/Gen2.1 Eval Kit Software/LabVIEW Executable/Parker_Gen2Sensor_v2.3/Parker_Gen2Sensor_v2.3.exe)    [(.vi)](tedoh2366.github.io/software/labview/Gen2.1 Eval Kit Software/LabVIEW VI/Parker_Gen2Sensor_v2.3.vi)   [(Windows 7 USB Driver)](tedoh2366.github.io/software/labview/Gen2.1 Eval Kit Software/Software to Install/AX-008-038_RevA.inf)   [LabVIEW Drivers]()
 
-For Instructions: [EAP Evaluation Kit Wiki](tedoh2366.github.io/software/labview/Gen2.1 Eval Kit Software/Gen2.1 EAP Sensor Install and Software Guide.pdf)
+For Instructions: [Wonder-Rubber Evaluation Kit Wiki](intelymer.wikidot.com)
 
 
 
@@ -12,7 +12,7 @@ For Instructions: [EAP Evaluation Kit Wiki](tedoh2366.github.io/software/labview
 
 Hello Wonder Rubbers. This will be a daily blog on the latest and greatest of all things squishy:
 
-![Mac-Daddy](tedoh2366.github.io/logo.png "A-Rod")
+![Mac-Daddy](tedoh2366.github.io/logo.png "Dr. Wonder")
 
 ```markdown
 Example code for EAP sensors will be added in this section
