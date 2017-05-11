@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title>EAP Test</title>
+</head>
+<body>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.5.0.js"></script>
+    <script type="text/javascript" src="https://pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/1.0.0/eon.css"/>
+    
+    <div id="chart1"></div>
+    <div id="chart2"></div>
+    
+    <!-- Instantiate PubNub -->
+    <script type="text/javascript">
+        
+        var pubnubDemo = new PubNub({
+            publishKey: 'pub-c-3942c648-843c-496f-92cd-72c9f7208d04',
+            subscribeKey: 'sub-c-c3322f58-e285-11e6-8d2d-02ee2ddab7fe',
+        });  
+    </script>
+    
+    <script>
+        // Subscribe to the demo_tutorial channel
+        pubnubDemo.addListener({
+            message: function(message){
+                console.log(message)
+            }
+        });
+
+        pubnubDemo.subscribe({
+            channels: ['EAP_ts1', 'EAP_ts2']
+        });      
+    </script>
+    
+    <script>
+        eon.chart({
+            pubnub: pubnubDemo,
+            channels: ['EAP_ts1'],
+            generate: {
+              bindto: '#chart1',
+              data: {
+                type: 'gauge',
+              },
+              gauge: {
+                min: 0,
+                max: 100
+              },
+              color: {
+                pattern: ['#FF0000', '#F6C600', '#60B044'],
+                threshold: {
+                  values: [30, 60, 90]
+                }
+              }
+            }
+        });
+        
+        eon.chart({
+            channels: ['EAP_ts1'],
+            history: false,
+            flow: true,
+            pubnub: pubnubDemo,
+            rate: 1000,
+            limit: 500,
+            generate: {
+                bindto: '#chart2',
+                data: {
+                    colors: {"EAP Sensor #1":"#D70060"},
+                    type: 'spline'
+                },
+                transition: {
+                    duration: 250
+                },
+                axis: {
+                    x: {
+                        label: "Time"
+                    },
+                    y: {
+                        label: "Strain (%)"
+                    }
+                },
+                grid: {
+                    x: {
+                        show: true 
+                    },
+                    y: {
+                        show: true 
+                    }
+                },
+                tooltip: {
+                    show: true
+                },
+                point: {
+                    show: true
+                }
+            }
+        });
+    </script> 
+</body>
+</html>

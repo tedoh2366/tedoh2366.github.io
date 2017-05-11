@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<style>
+  .myForm {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.8em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .myForm * {
+    box-sizing: border-box;
+  }
+
+  .myForm label {
+    padding: 0;
+    font-weight: bold;
+  }
+
+  .myForm input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 0.9em;
+    padding: 0.5em;
+  }
+
+  .myForm input[type="email"],
+  .myForm input[type="password"] {
+    width: 12em;
+  }
+
+  .myForm button {
+    padding: 0.7em;
+    border-radius: 0.5em;
+    background: #eee;
+    border: none;
+    font-weight: bold;
+  }
+
+  .myForm button:hover {
+    background: #ccc;
+    cursor: pointer;
+  }
+</style>
+
+<form class="myForm" method="get" action="/html/codes/html_form_handler.cfm">
+
+  <p>
+    <label>Email 
+      <input type="email" name="user_email" required>
+    </label> 
+
+    <label>Password 
+      <input type="password" name="user_pwd" required>
+    </label>
+
+    <button>Log In</button>
+  </p>
+
+  <p>
+    <label>
+      <input type="checkbox"> Remember me
+    </label>
+  </p>
+
+</form>
+
+<hr>
+
+
+
+<html lang="en">
+<head>
+    <title>EAP Test</title>
+</head>
+    
+<body>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.5.0.js"></script>
+    <script type="text/javascript" src="https://pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/1.0.0/eon.css"/>
+    
+    <div id="chart1"></div>
+    <div id="chart2"></div>
+    <div id="chart"></div>
+    
+    <!-- Instantiate PubNub -->
+    <script type="text/javascript">
+        
+        var pubnubDemo = new PubNub({
+            publishKey: 'pub-c-3942c648-843c-496f-92cd-72c9f7208d04',
+            subscribeKey: 'sub-c-c3322f58-e285-11e6-8d2d-02ee2ddab7fe',
+        });  
+    </script>
+    
+    <script>
+        // Subscribe to the demo_tutorial channel
+        pubnubDemo.addListener({
+            message: function(message){
+                console.log(message)
+            }
+        });
+
+        pubnubDemo.subscribe({
+            channels: ['EAP_ts1', 'EAP_ts2']
+        }); 
+        
+        var virt_channel = "EAP_stream" + new Date().getTime();
+        
+    </script>
+    
+    <script>
+        eon.chart({
+            pubnub: pubnubDemo,
+            channels: ['EAP_ts1'],
+            generate: {
+              bindto: '#chart1',
+              data: {
+                type: 'gauge',
+              },
+              gauge: {
+                min: 0,
+                max: 100
+              },
+              color: {
+                pattern: ['#FF0000', '#F6C600', '#60B044'],
+                threshold: {
+                  values: [30, 60, 90]
+                }
+              }
+            }
+        });
+        
+        eon.chart({
+            channels: ['EAP_ts1'],
+            history: false,
+            flow: true,
+            pubnub: pubnubDemo,
+            rate: 1000,
+            limit: 500,
+            generate: {
+                bindto: '#chart2',
+                data: {
+                    colors: {"EAP Sensor #1":"#D70060"},
+                    type: 'spline'
+                },
+                transition: {
+                    duration: 250
+                },
+                axis: {
+                    x: {
+                        label: "Time"
+                    },
+                    y: {
+                        label: "Strain (%)"
+                    }
+                },
+                grid: {
+                    x: {
+                        show: true 
+                    },
+                    y: {
+                        show: true 
+                    }
+                },
+                tooltip: {
+                    show: true
+                },
+                point: {
+                    show: true
+                }
+            }
+        });
+        
+        eon.chart({
+            channels: [virt_channel],
+            flow: true,
+            pubnub: pubnubDemo,
+            limit: 100,
+            xType: 'custom',
+            xId: 'pub_time',
+            generate: {
+                bindto: '#chart',
+                data: {
+                    type: 'spline',
+                    labels: false
+                }
+            }
+        });
+       
+    </script>
+    
+<!--
+    <script>
+        setInterval(function(){
+            var data = [];
+            var date = new Date().getTime();
+            for(var i = 0; i < 10; i++) {
+                data.push({
+                    'pub_time': date + (100 * i),
+                    'Sensor #1': Math.floor(Math.random() * 99)
+                });
+            }
+            pubnub.publish({
+                channel: virt_channel,
+                message: {
+                    eons: data
+                }
+            });
+            data2 = [];
+            date2 = new Date().getTime();
+            for(var j = 0; j < 10; j++) {
+                data2.push({
+                    'pub_time': date2 + (100 * j),
+                    'Sensor #2': Math.floor(Math.random() * 99)
+                });
+            }
+            pubnub.publish({
+                channel: virt_channel,
+                message: {
+                    eons: data2
+                }
+            });
+        }, 1000);
+    </script>
+-->    
+    
+    <button onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    
+</body>
+</html>
